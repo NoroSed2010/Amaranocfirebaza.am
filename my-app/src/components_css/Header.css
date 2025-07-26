@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo_img {
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainHeader {
+    display: flex;
+}
+
+.teg {
+    padding: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    position: relative;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: orange;
+    transition: 0.3s;
+}
+
+.btn:hover::after {
+    width: 100%;
+}
+
+.tegs {
+    display: flex;
+}
+
+.iconimput {
+    padding: 10px;
+    display: flex;
+}
+
+.fa {
+    padding: 10px;
+}
+
+.text {
+    padding: 10px;
+    border-radius: 15px;
+}

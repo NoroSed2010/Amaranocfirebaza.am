@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.marz {
+    max-height: 100px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.info {
+    margin-left: 15px;
+    padding: 15px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.klor {
+    padding: 5px;
+    text-align: center;
+    width: 25px;
+    border: 1px solid #ccc;
+    border-radius: 100%;
+}
+
+.klor:hover {
+    transition: 0.8s;
+    color: white;
+    background-color: black;
+}
+
+.dram {
+    color: white;
+    background-color: black;
+}
+
+.gintext {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gin {
+    display: flex;
+}
+
+.inputs {
+    display: flex;
+}
+
+.skizbverj {
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+    border-radius: 150px;
+}
+
+.new {
+    padding: 10px;
+    text-align: center;
+    width: 50px;
+    border: 1px solid #ccc;
+    border-radius: 100%;
+    color: white;
+    background-color: gray;
+}
+
+.qanak {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.mainqanak {
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icontext {
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.calendar {
+    margin-left: 15px;
+    height: 40px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.qartez {
+    margin-left: 15px;
+    display: flex;
+}
+
+.qartezcalendar {
+    display: flex;
+}
+
+.newDiv {
+    display: flex;
+}
+
+.houses {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.houses {
+    text-decoration: none;
+    position: relative;
+}
+
+.houses::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: orange;
+    transition: 0.3s;
+}
+
+.houses:hover::after {
+    width: 100%;
+}
+
+.qartez {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.qartezcalendar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icontext {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.calendar {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.orinak {
+    width: 35vw;
+    display: flex;
+    gap: 25px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+}
+
+.orinak div {
+    margin-left: 10px;
+}
+
+.img {
+    width: 300px;
+}
+
+.nkarinfo {
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+}

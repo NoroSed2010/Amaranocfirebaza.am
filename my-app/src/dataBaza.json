@@ -1,0 +1,379 @@
+{
+  "db": [
+    {
+      "id": 1,
+      "name": "Դիլիջան",
+      "qanak": 89
+    },
+    {
+      "id": 2,
+      "name": "Ծաղկաձոր",
+      "qanak": 63
+    },
+    {
+      "id": 3,
+      "name": "Երևան",
+      "qanak": 17
+    },
+    {
+      "id": 4,
+      "name": "Ձորաղբյուր",
+      "qanak": 17
+    },
+    {
+      "id": 5,
+      "name": "Գառնի",
+      "qanak": 16
+    },
+    {
+      "id": 6,
+      "name": "Աշտարակ",
+      "qanak": 15
+    },
+    {
+      "id": 7,
+      "name": "Ջրվեժ",
+      "qanak": 10
+    },
+    {
+      "id": 8,
+      "name": "Արզնի",
+      "qanak": 9
+    },
+    {
+      "id": 9,
+      "name": "Նոր Հաճն",
+      "qanak": 9
+    },
+    {
+      "id": 10,
+      "name": "Աբովյան",
+      "qanak": 7
+    },
+    {
+      "id": 11,
+      "name": "Սևան",
+      "qanak": 7
+    },
+    {
+      "id": 12,
+      "name": "Հրազդան",
+      "qanak": 7
+    },
+    {
+      "id": 13,
+      "name": "Պտղնի",
+      "qanak": 6
+    },
+    {
+      "id": 14,
+      "name": "Զովունի",
+      "qanak": 6
+    },
+    {
+      "id": 15,
+      "name": "Ստեփանավան",
+      "qanak": 6
+    },
+    {
+      "id": 16,
+      "name": "Արգել",
+      "qanak": 5
+    },
+    {
+      "id": 17,
+      "name": "Քասախ",
+      "qanak": 5
+    },
+    {
+      "id": 18,
+      "name": "Ջերմուկ",
+      "qanak": 5
+    },
+    {
+      "id": 19,
+      "name": "Իջևան",
+      "qanak": 5
+    },
+    {
+      "id": 20,
+      "name": "Առինջ",
+      "qanak": 4
+    },
+    {
+      "id": 21,
+      "name": "Եղվարդ",
+      "qanak": 4
+    },
+    {
+      "id": 22,
+      "name": "Բջնի",
+      "qanak": 4
+    },
+    {
+      "id": 23,
+      "name": "Գյուլագարակ",
+      "qanak": 4
+    },
+    {
+      "id": 24,
+      "name": "Օհանավան",
+      "qanak": 4
+    },
+    {
+      "id": 25,
+      "name": "Հաղարծին",
+      "qanak": 4
+    },
+    {
+      "id": 26,
+      "name": "Արզական",
+      "qanak": 3
+    },
+    {
+      "id": 27,
+      "name": "Բյուրեղավան",
+      "qanak": 3
+    },
+    {
+      "id": 28,
+      "name": "Ապարան",
+      "qanak": 3
+    },
+    {
+      "id": 29,
+      "name": "Ակունք",
+      "qanak": 2
+    },
+    {
+      "id": 30,
+      "name": "Նոր Գեղի",
+      "qanak": 2
+    },
+    {
+      "id": 31,
+      "name": "Մրգաշեն",
+      "qanak": 2
+    },
+    {
+      "id": 32,
+      "name": "Թեղենիք",
+      "qanak": 2
+    },
+    {
+      "id": 33,
+      "name": "Վանաձոր",
+      "qanak": 2
+    },
+    {
+      "id": 34,
+      "name": "Բյուրական",
+      "qanak": 2
+    },
+    {
+      "id": 35,
+      "name": "Օշական",
+      "qanak": 2
+    },
+    {
+      "id": 36,
+      "name": "Արգավանդ",
+      "qanak": 1
+    },
+    {
+      "id": 37,
+      "name": "Քարաշամբ",
+      "qanak": 1
+    },
+    {
+      "id": 38,
+      "name": "Մայակովսկի",
+      "qanak": 1
+    },
+    {
+      "id": 39,
+      "name": "Նոր Արտմենտ",
+      "qanak": 1
+    },
+    {
+      "id": 40,
+      "name": "Ֆանտան",
+      "qanak": 1
+    },
+    {
+      "id": 41,
+      "name": "Աղվերան",
+      "qanak": 1
+    },
+    {
+      "id": 42,
+      "name": "Գողթ",
+      "qanak": 1
+    },
+    {
+      "id": 43,
+      "name": "Հանքավան",
+      "qanak": 1
+    },
+    {
+      "id": 44,
+      "name": "Դրախտիկ",
+      "qanak": 1
+    },
+    {
+      "id": 45,
+      "name": "Փարպի",
+      "qanak": 1
+    },
+    {
+      "id": 46,
+      "name": "Աղձք",
+      "qanak": 1
+    },
+    {
+      "id": 47,
+      "name": "Բազմաղբյուր",
+      "qanak": 1
+    }
+  ],
+  "dbimg": [
+    {
+      "id": 1,
+      "src": "/img1.png",
+      "tex": "Հրազդան",
+      "gin": "150,000 ֏"
+    },
+    {
+      "id": 2,
+      "src": "/img2.png",
+      "tex": "Օհանավան",
+      "gin": "60,000 ֏"
+    },
+    {
+      "id": 3,
+      "src": "/img3.png",
+      "tex": "Գառնի",
+      "gin": "100,000 ֏"
+    },
+    {
+      "id": 4,
+      "src": "/img4.png",
+      "tex": "Դիլիջան",
+      "gin": "55,000 ֏"
+    },
+    {
+      "id": 5,
+      "src": "/img5.png",
+      "tex": "Գառնի",
+      "gin": "70,000 ֏"
+    },
+    {
+      "id": 6,
+      "src": "/img6.png",
+      "tex": "Հրազդան",
+      "gin": "150,000 ֏"
+    },
+    {
+      "id": 7,
+      "src": "/img7.png",
+      "tex": "Ձորաղբյուր",
+      "gin": "60,000 ֏"
+    },
+    {
+      "id": 8,
+      "src": "/img8.png",
+      "tex": "Հրազդան",
+      "gin": "150,000 ֏"
+    },
+    {
+      "id": 9,
+      "src": "/img9.png",
+      "tex": "Հրազդան",
+      "gin": "150,000 ֏"
+    }
+  ],
+  "dder": [
+    {
+      "id": 1,
+      "logo": "֏",
+      "class2": "dram"
+    },
+    {
+      "id": 2,
+      "logo": "$",
+      "class2": "dolar"
+    },
+    {
+      "id": 3,
+      "logo": "€",
+      "class2": "evro"
+    },
+    {
+      "id": 4,
+      "logo": "₽",
+      "class2": "rubli"
+    }
+  ],
+  "dborinak": [
+    {
+      "id": 1,
+      "divclass": "Private houses",
+      "iconclass": "fa fa-home",
+      "text": "Առանձնատներ"
+    },
+    {
+      "id": 2,
+      "divclass": "Frame houses",
+      "iconclass": "fa fa-exclamation-triangle",
+      "text": "Frame houses"
+    },
+    {
+      "id": 3,
+      "divclass": "Cabins houses",
+      "iconclass": "fa fa-university",
+      "text": "Տնակներ"
+    },
+    {
+      "id": 4,
+      "divclass": "swimmingPool houses",
+      "iconclass": "fa fa-sort-amount-asc",
+      "text": "Առանձնատներ"
+    }
+  ],
+  "dbinput": [
+    {
+      "id": 1,
+      "type": "text",
+      "placeholder": "Սկսած",
+      "class": "skizbverj"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "placeholder": "Մինչև",
+      "class": "skizbverj"
+    }
+  ],
+  "dbtext": [
+    {
+      "id": 1,
+      "text": "Գլխավոր",
+      "class": "btn"
+    },
+    {
+      "id": 2,
+      "text": "Զեղչեր",
+      "class": "btn"
+    },
+    {
+      "id": 3,
+      "text": "Ծառայություններ",
+      "class": "btn"
+    },
+    {
+      "id": 4,
+      "text": "Մեր մասին",
+      "class": "btn"
+    }
+  ]
+}
