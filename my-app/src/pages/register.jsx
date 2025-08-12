@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./firebase";
+import { auth } from "../firebase";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -33,11 +33,7 @@ export default function Register() {
       <div>
         <h2>Գրանցվել</h2>
 
-        {error && (
-          <div>
-            {error}
-          </div>
-        )}
+        {error && <div>{error}</div>}
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
@@ -65,7 +61,12 @@ export default function Register() {
           </div>
 
           <div>
-            <label htmlFor="confirmPassword" className="block mb-1 font-semibold">Կրկնել գաղտնաբառը</label>
+            <label
+              htmlFor="confirmPassword"
+              className="block mb-1 font-semibold"
+            >
+              Կրկնել գաղտնաբառը
+            </label>
             <input
               type="password"
               id="confirmPassword"

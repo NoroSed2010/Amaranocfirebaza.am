@@ -2,6 +2,7 @@ import useAuthUser from "../hooks/useAuthUser";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase";
 import { useState } from "react";
+import ShowText from "./Text";
 
 export default function Chat() {
   const user = useAuthUser();
@@ -28,6 +29,7 @@ export default function Chat() {
         placeholder="Գրիր..."
       />
       <button onClick={sendMessage}>Ուղարկել</button>
+      <ShowText/>
     </div>
   );
 }
