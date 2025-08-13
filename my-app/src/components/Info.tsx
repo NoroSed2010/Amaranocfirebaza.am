@@ -1,15 +1,18 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Marz from "./Marz";
 import Pox from "./Pox";
 import Input from "./Inputs";
 
 export default function Info() {
-  let el = <h3>Տարածաշրջան</h3>;
-  let el2 = <h4>Մարդկանց թույլատրելի քանակ</h4>;
-  const [count, setCount] = useState(1);
+  const el = <h3>Տարածաշրջան</h3>;
+  const el2  = <h4>Մարդկանց թույլատրելի քանակ</h4>;
 
-  function minusFun(count, setCount) {
+  const [count, setCount] = useState<number>(1);
+
+  function minusFun(
+    count: number,
+    setCount: React.Dispatch<React.SetStateAction<number>>
+  ): void {
     if (count > 1) {
       setCount(count - 1);
     }

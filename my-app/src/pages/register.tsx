@@ -1,17 +1,16 @@
-// register.jsx
-import { useState } from "react";
+import React, { useState, FormEvent, ChangeEvent } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
-export default function Register() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [error, setError] = useState(null);
+export default function Register(){
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [confirmPassword, setConfirmPassword] = useState<string>("");
+  const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
     setError(null);
 
@@ -23,10 +22,14 @@ export default function Register() {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       navigate("/");
-    } catch (err) {
+    } catch (err: any) {
       setError(err.message);
     }
   };
+
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value);
+  const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value);
+  const handleConfirmPasswordChange = (e: ChangeEvent<HTMLInputElement>) => setConfirmPassword(e.target.value);
 
   return (
     <div>
@@ -42,7 +45,7 @@ export default function Register() {
               type="email"
               id="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleEmailChange}
               required
               placeholder="example@mail.com"
             />
@@ -54,24 +57,21 @@ export default function Register() {
               type="password"
               id="password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={handlePasswordChange}
               required
               placeholder="********"
             />
           </div>
 
           <div>
-            <label
-              htmlFor="confirmPassword"
-              className="block mb-1 font-semibold"
-            >
+            <label htmlFor="confirmPassword" className="block mb-1 font-semibold">
               Կրկնել գաղտնաբառը
             </label>
             <input
               type="password"
               id="confirmPassword"
               value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
+              onChange={handleConfirmPasswordChange}
               required
               placeholder="********"
             />

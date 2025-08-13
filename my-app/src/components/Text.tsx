@@ -1,16 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { collection, onSnapshot } from "firebase/firestore";
-import { db } from "../firebase"; 
+import { db } from "../firebase";
+
+interface Message {
+  text: string;
+  email: string | null;
+}
 
 export default function ShowAllTexts() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState<Message[]>([]);
 
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, "messages"), (snapshot) => {
-      const data = snapshot.docs.map(doc => ({
-        text: doc.data().text,
-        email: doc.data().email
-      }));
+      const data: Message[] = snapshot.docs.map(doc => {
+        const docData = doc.data();
+        return {
+          text: docData.text as string,
+          email: docData.email as string | null,
+        };
+      });
       setMessages(data);
     });
 

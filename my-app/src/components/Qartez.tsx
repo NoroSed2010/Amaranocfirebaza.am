@@ -1,3 +1,4 @@
+import React from "react";
 import Nkar from "./Nkar";
 import Orinak from "./Orinak";
 import Qartezcalendar from "./Qartezcalendar";

@@ -1,16 +1,16 @@
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, User } from "firebase/auth";
 import { auth } from "./firebase";
 
 import Login from "./pages/mainlogin";
 import Register from "./pages/register";
 import Home from "./pages/Home";
 
-function App() {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+export default function App() {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -33,5 +33,3 @@ function App() {
     </Routes>
   );
 }
-
-export default App;

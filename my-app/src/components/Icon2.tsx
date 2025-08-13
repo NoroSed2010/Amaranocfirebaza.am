@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Icon2() {
   return (
     <div className="inputs2">
