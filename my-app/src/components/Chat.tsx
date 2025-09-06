@@ -2,14 +2,15 @@ import React, { useState, ChangeEvent } from "react";
 import useAuthUser from "../Hooks/useAuthUser";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase";
-import ShowText from "./Text";
+import ShowAllTexts from "./Text";
+import "../components_css/Chat.css";
 
 interface AuthUser {
   uid: string;
   email: string | null;
 }
 
-export default function Chat(){
+export default function Chat() {
   const user = useAuthUser() as AuthUser | null;
   const [msg, setMsg] = useState<string>("");
 
@@ -33,14 +34,18 @@ export default function Chat(){
   };
 
   return (
-    <div>
-      <input
-        value={msg}
-        onChange={handleChange}
-        placeholder="Գրիր..."
-      />
-      <button onClick={sendMessage}>Ուղարկել</button>
-      <ShowText />
+    <div className="div">
+      <div className="inbtn">
+        <input
+          value={msg}
+          onChange={handleChange}
+          placeholder="Գրիր..."
+        />
+        <button onClick={sendMessage}>Ուղարկել</button>
+      </div>
+      <div className="mainDiv">
+        <ShowAllTexts />
+      </div>
     </div>
   );
 }

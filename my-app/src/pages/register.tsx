@@ -2,8 +2,9 @@ import React, { useState, FormEvent, ChangeEvent } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
+import "../components_css/register.css";
 
-export default function Register(){
+export default function Register() {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
@@ -32,14 +33,14 @@ export default function Register(){
   const handleConfirmPasswordChange = (e: ChangeEvent<HTMLInputElement>) => setConfirmPassword(e.target.value);
 
   return (
-    <div>
-      <div>
+    <div className="register-container">
+      <div className="register-card">
         <h2>Գրանցվել</h2>
 
-        {error && <div>{error}</div>}
+        {error && <div className="error-message">{error}</div>}
 
-        <form onSubmit={handleSubmit} className="space-y-5">
-          <div>
+        <form onSubmit={handleSubmit} className="register-form">
+          <div className="form-group">
             <label htmlFor="email">Էլ. հասցե</label>
             <input
               type="email"
@@ -51,7 +52,7 @@ export default function Register(){
             />
           </div>
 
-          <div>
+          <div className="form-group">
             <label htmlFor="password">Գաղտնաբառ</label>
             <input
               type="password"
@@ -63,10 +64,8 @@ export default function Register(){
             />
           </div>
 
-          <div>
-            <label htmlFor="confirmPassword" className="block mb-1 font-semibold">
-              Կրկնել գաղտնաբառը
-            </label>
+          <div className="form-group">
+            <label htmlFor="confirmPassword">Կրկնել գաղտնաբառը</label>
             <input
               type="password"
               id="confirmPassword"
@@ -77,9 +76,9 @@ export default function Register(){
             />
           </div>
 
-          <button type="submit">Գրանցվել</button>
+          <button type="submit" className="btn-primary">Գրանցվել</button>
 
-          <p>
+          <p className="switch-link">
             Ունե՞ս հաշիվ։ <Link to="/login">Մուտք գործել</Link>
           </p>
         </form>

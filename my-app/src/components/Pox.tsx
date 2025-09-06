@@ -30,7 +30,7 @@ export default function Pox() {
     };
 
     xhr.send();
-  }, []);
+  }, []); 
 
   return <div className="gin">{pox}</div>;
 }

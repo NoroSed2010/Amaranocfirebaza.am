@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase";
+import "../components_css/Chat.css";
 
 interface Message {
   text: string;
@@ -26,7 +27,7 @@ export default function ShowAllTexts() {
   }, []);
 
   return (
-    <div>
+    <div className="messages">
       {messages.map((msg, index) => (
         <p key={index}>
           <strong>{msg.email}:</strong> {msg.text}

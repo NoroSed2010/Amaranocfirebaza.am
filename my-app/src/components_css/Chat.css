@@ -1,0 +1,78 @@
+input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ff8800;
+  background-color: #2b2b2b;
+  color: white;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+input::placeholder {
+  color: #bbbbbb;
+}
+
+input:focus {
+  border-color: #ff6600;
+  box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #ff8800;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #ff6600;
+  transform: scale(1.05);
+}
+
+.messages {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.messages p {
+  background: #2b2b2b;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 0;
+  color: orange;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.messages strong {
+  color: #ffcc80;
+  margin-right: 5px;
+}
+
+.mainDiv {
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  border: 3px solid orange;
+  width: 25vw;
+  height: 500px;
+  overflow-y: auto;
+  background-color: black;
+}
+
+.div {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.inbtn {
+  margin-left: 50px;
+}

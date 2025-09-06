@@ -2,6 +2,7 @@ import React, { useState, FormEvent, ChangeEvent } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
+import "../components_css/mainlogin.css";
 
 export default function Login() {
   const [email, setEmail] = useState<string>("");
@@ -25,44 +26,42 @@ export default function Login() {
   const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value);
 
   return (
-    <div>
-      <div>
-        <div>
-          <h2>Մուտք գործել</h2>
-          {error && <div>{error}</div>}
+    <div className="login-container">
+      <div className="login-card">
+        <h2>Մուտք գործել</h2>
+        {error && <div className="error-message">{error}</div>}
 
-          <form onSubmit={handleSubmit}>
-            <div>
-              <label htmlFor="email">Էլ. հասցե</label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={handleEmailChange}
-                required
-                placeholder="example@mail.com"
-              />
-            </div>
+        <form onSubmit={handleSubmit} className="login-form">
+          <div className="form-group">
+            <label htmlFor="email">Էլ. հասցե</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={handleEmailChange}
+              required
+              placeholder="example@mail.com"
+            />
+          </div>
 
-            <div>
-              <label htmlFor="password">Գաղտնաբառ</label>
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={handlePasswordChange}
-                required
-                placeholder="********"
-              />
-            </div>
+          <div className="form-group">
+            <label htmlFor="password">Գաղտնաբառ</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={handlePasswordChange}
+              required
+              placeholder="********"
+            />
+          </div>
 
-            <button type="submit">Մուտք գործել</button>
+          <button type="submit" className="btn-primary">Մուտք գործել</button>
 
-            <button type="button">
-              Չունե՞ս հաշիվ։ <Link to="/register">Գրանցվել</Link>
-            </button>
-          </form>
-        </div>
+          <button type="button" className="btn-secondary">
+            Չունե՞ս հաշիվ։ <Link to="/register">Գրանցվել</Link>
+          </button>
+        </form>
       </div>
     </div>
   );

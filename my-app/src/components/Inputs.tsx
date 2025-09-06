@@ -28,7 +28,6 @@ export default function Input() {
             defaultValue={inel.text}
           />
         );
-
         setInput(inputEl);
       }
     };

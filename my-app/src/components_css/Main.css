@@ -24,17 +24,19 @@
 
 .info {
   margin-left: 15px;
+  margin-top: 70px;
   padding: 15px;
   width: 300px;
-  height: 300px;
+  height: max-content;
   border: 1px solid #ccc;
   border-radius: 15px;
 }
 
 .klor {
   padding: 5px;
+  margin: 2px;
   text-align: center;
-  width: 25px;
+  width: 35px;
   border: 1px solid #ccc;
   border-radius: 100%;
 }
@@ -68,6 +70,8 @@
   padding: 10px;
   width: 100px;
   border-radius: 150px;
+  background-color: white;
+  color: black;
 }
 
 .new {
@@ -119,6 +123,7 @@
 
 .qartezcalendar {
   display: flex;
+  margin-top: 70px;
 }
 
 .newDiv {
@@ -184,14 +189,84 @@
   cursor: pointer;
 }
 
-.orinak {
-  width: 35vw;
+.orinak-container {
+  position: relative;
   display: flex;
-  gap: 25px;
-  border: 1px solid #ccc;
-  border-left: none;
-  border-right: none;
+  align-items: center;
+  width: 850px;
+  margin: auto;
 }
+
+.orinak {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.orinak::-webkit-scrollbar {
+  display: none;
+}
+
+.orinak>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.orinak>div i {
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.orinak>div h5 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.arrow span {
+  font-size: 18px;
+  color: #222;
+  line-height: 1;
+}
+
+.arrow:hover {
+  background: #f8f8f8;
+  border-color: #666;
+}
+
+.arrow.left {
+  left: -25px;
+}
+
+.arrow.right {
+  right: -25px;
+}
+
 
 .orinak div {
   margin-left: 10px;
@@ -210,11 +285,6 @@
   border-radius: 20%;
 }
 
-.nkarimg:hover {
-  transform: scale(0.9, 1);
-  transition: 0.8s;
-}
-
 .namecountry {
   font-family: cursive;
 }
@@ -222,4 +292,158 @@
 .nkarinfo {
   display: grid;
   grid-template-columns: 350px 350px 350px;
+}
+
+
+.vernagir {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.vernagir p {
+  color: #000000;
+  font-weight: bold;
+}
+
+.vernagir h1 {
+  color: #000000;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.imgzexj {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.imgzexj img {
+  width: 450px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.imgzexj img:hover {
+  transform: scale(1.05);
+}
+
+.arajarks {
+  padding: 10px;
+  margin-left: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid gray;
+  width: 85vw;
+  border-radius: 20px;
+}
+
+.mainDivZexj {
+  margin: 15px;
+  margin-left: 108px;
+  display: grid;
+  grid-template-columns: 450px 450px 450px;
+}
+
+.workdiv {
+  margin-top: 80px;
+  margin-left: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.newDivs {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 450px 450px 450px;
+  gap: 20px;
+  padding: 20px;
+}
+
+.newDivs > div {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.newDivs > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+.newDivs img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.newDivs h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 15px;
+}
+
+.newDivs div > div {
+  padding: 0 15px 20px 15px;
+}
+
+.newDivs p:first-of-type {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.newDivs p:last-of-type {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.newDivs button {
+  border: 1px solid #ff7300;
+  background: transparent;
+  color: #ff7300;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.newDivs button:hover {
+  background: #ff7300;
+  color: #fff;
+}
+
+.maininfodiv{
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 90vw;
+}
+
+.imgmain{
+  height: 600px;
+}
+
+.aravelutyun{
+  margin-top: 50px;
+  margin-left: 150px;
+  padding: 10px;
+  width: 80vw;
+  border: 1px solid gray;
+  border-radius: 20px;
+}
+
+.qartez{
+  height: 65vh;
 }

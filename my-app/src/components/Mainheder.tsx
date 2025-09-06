@@ -1,43 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-interface TextData {
-  class: string;
-  text: string;
-}
+export default function Mainheder() {
+  const navigate = useNavigate();
 
-export default function Mainheder(){
-  const [text, setText] = useState([]);
+  function click() {
+    navigate("/Home")
+  }
 
-  useEffect(() => {
-    const xhr = new XMLHttpRequest();
-    xhr.open(
-      "GET",
-      "https://amaranocfirebasa-default-rtdb.firebaseio.com/dbtext.json"
-    );
+  function click2() {
+    navigate("/zexj")
+  }
 
-    xhr.onreadystatechange = () => {
-      if (xhr.status === 200 && xhr.readyState === 4) {
-        const data: TextData[] = JSON.parse(xhr.responseText);
+  function click3() {
+    navigate("/work")
+  }
 
-        const textEl = data.map((el, index) => (
-          <div key={index} className="teg">
-            <p className={el.class}>{el.text}</p>
-          </div>
-        ));
-
-        setText(textEl);
-      }
-    };
-
-    xhr.send();
-  }, []);
+  function click4() {
+    navigate("/about-us")
+  }
 
   return (
     <div className="mainHeader">
       <div className="image">
         <img src="/logoamar.png" className="logo_img" alt="logo" />
       </div>
-      <div className="tegs">{text}</div>
+      <div className="tegs">
+        <p className="btn m-3" onClick={click}>Գլխավոր</p>
+        <p className="btn m-3" onClick={click2}>Զեղչեր</p>
+        <p className="btn m-3" onClick={click3}>Ծառայություններ</p>
+        <p className="btn m-3" onClick={click4}>Մեր մասին</p>
+      </div>
     </div>
   );
 }

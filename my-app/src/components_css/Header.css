@@ -12,6 +12,20 @@ header {
   justify-content: space-around;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.header.hide {
+  transform: translateY(-100%);
+}
+
 .mainHeader {
   display: flex;
 }
