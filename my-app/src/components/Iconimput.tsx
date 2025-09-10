@@ -2,14 +2,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
+import { useMarzStore } from "../Store/storeMarz";
 
-interface IconInputProps {
-  search: string;
-  setSearch: (value: string) => void;
-}
-
-export default function IconInput({ search, setSearch }: IconInputProps) {
+export default function IconInput() {
   const navigate = useNavigate();
+  const { search, setSearch } = useMarzStore();
 
   const click = () => navigate("/chatmain");
   const click2 = () => navigate("/likes");

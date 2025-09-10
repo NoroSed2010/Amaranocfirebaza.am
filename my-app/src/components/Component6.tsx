@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from "react";
-import Likes from "./like";
-import { useMarzStore } from "../Store/storeMarz";
 import Skeleton from "./Skeleton";
+import { useMarzStore } from "../Store/storeMarz";
+import Likes from "./like";
+import Arandznatan from "./Arandznatun";
+import Houses from "./Framehouses";
+import Tnak from "./Tnakner";
+import Shuxur from "./Shuxur";
+import Tesaran from "./Tesaran";
+import Pahanj from "./Pahanj";
+import New from "./New";
+import Bnakaran from "./Bnakaran";
+import Pull from "./swimingpull";
 
 interface NkarData {
     src: string;
@@ -10,17 +19,28 @@ interface NkarData {
     people: number;
 }
 
-export default function NkarZexj() {
+export default function Com6() {
     const [data, setData] = useState<NkarData[] | null>(null);
     const [loading, setLoading] = useState(true);
-    const [search, setSearch] = useState("");
+    const [columns, setColumns] = useState(3);
 
-    const { selected, count, minPrice, maxPrice } = useMarzStore();
 
+    const {
+        selected,
+        count,
+        minPrice,
+        maxPrice,
+        selectedOrinak,
+        setSelectedOrinak,
+        search,
+        active,
+        nightActive,
+        senyakActive
+    } = useMarzStore();
 
     useEffect(() => {
         const xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://amaranocfirebasa-default-rtdb.firebaseio.com/dbnkar.json");
+        xhr.open("GET", "https://amaranocfirebasa-default-rtdb.firebaseio.com/dbimg.json");
 
         xhr.onreadystatechange = () => {
             if (xhr.status === 200 && xhr.readyState === 4) {
@@ -32,8 +52,6 @@ export default function NkarZexj() {
 
         xhr.send();
     }, []);
-
-
 
     const filteredData = data?.filter((el) => {
         const price = Number(el.gin);
@@ -47,9 +65,19 @@ export default function NkarZexj() {
     });
 
     return (
-        <div className="mainDivZexj">
-            {
-                loading ? (
+        <div>
+            <Tesaran />
+            <Houses />
+            <h1 className="m-5">Սովորական առաջարկներ</h1>
+            <div
+                style={{
+                    width: "50vw",
+                    display: "grid",
+                    gridTemplateColumns: `repeat(${columns}, 1fr)`,
+                    gap: "20px",
+                }}
+            >
+                {loading ? (
                     <>
                         {(data?.length ? data : new Array(3).fill(null)).map((_, i) => (
                             <Skeleton key={i} margin="5px" width="300px" height="300px" />
@@ -59,7 +87,7 @@ export default function NkarZexj() {
                     filteredData.map((el, index) => (
                         <div
                             key={index}
-                            className="max-w-sm bg-white rounded-xl shadow-md overflow-hidden border border-gray-200"
+                            className="mainnkardiv max-w-sm bg-white rounded-xl shadow-md overflow-hidden border border-gray-200"
                         >
                             <div onClick={() => window.open(`/maininfo/${el.tex}`, "_blank")}>
                                 <div className="w-full h-56 overflow-hidden">
@@ -96,8 +124,8 @@ export default function NkarZexj() {
                     ))
                 ) : (
                     <p>Առաջարկներ չեն գտնվել</p>
-                )
-            }
+                )}
+            </div>
         </div>
-    );
+    )
 }

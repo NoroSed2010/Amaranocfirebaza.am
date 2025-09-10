@@ -3,6 +3,9 @@ import Marz from "./Marz";
 import Pox from "./Pox";
 import { useMarzStore } from "../Store/storeMarz";
 import FilterPox from "./Filterpox";
+import Night from "./Gisherakac";
+import Senyak from "./Senyakqanak";
+import Lox from "./Loxavazan";
 
 export default function Info() {
   const el = <h3>Տարածաշրջան</h3>;
@@ -21,13 +24,25 @@ export default function Info() {
         <Marz />
       </div>
 
+      <div>
+        <p className="pgic">————————————————</p>
+      </div>
+
       <div className="gintext">
         <h4>Արժեք</h4>
         <Pox />
       </div>
 
+      <div>
+        <p className="pgic">————————————————</p>
+      </div>
+
       <div style={{ margin: "20px 0", display: "flex", gap: "20px" }}>
-        <FilterPox/>
+        <FilterPox />
+      </div>
+
+      <div>
+        <p className="pgic">————————————————</p>
       </div>
 
       <div className="mardqanak">
@@ -41,6 +56,33 @@ export default function Info() {
             +
           </button>
         </div>
+      </div>
+
+      <div>
+        <p className="pgic">————————————————</p>
+      </div>
+
+      <div>
+        <h1>Գիշերակացի առկայություն</h1>
+        <Night />
+      </div>
+
+      <div>
+        <p className="pgic">————————————————</p>
+      </div>
+
+      <div>
+        <h1>Սենյակների քանակ</h1>
+        <Senyak />
+      </div>
+
+      <div>
+        <p className="pgic">————————————————</p>
+      </div>
+
+      <div>
+        <h1>Լողավազան</h1>
+        <Lox />
       </div>
     </div>
   );

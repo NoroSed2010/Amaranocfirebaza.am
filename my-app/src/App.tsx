@@ -14,6 +14,7 @@ import Zexj from "./components/Zexj";
 import Work from "./components/Work";
 import Us from "./components/Aboutus";
 import Maininfo from "./components/Maininfo";
+import NkarZexj from "./components/Zexjnkar";
 
 export default function App() {
   const [user, setUser] = useState<User | null>(null);
@@ -45,6 +46,7 @@ export default function App() {
       <Route path="/work" element={user ? <Work /> : <Navigate to="/login" />} />  
       <Route path="/about-us" element={user ? <Us /> : <Navigate to="/login" />} />    
       <Route path="/maininfo/:id" element={<Maininfo />} />
+      <Route path="/maininfo/:id" element={<NkarZexj />} />
     </Routes>
   );
 }

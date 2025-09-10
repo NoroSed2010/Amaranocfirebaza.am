@@ -90,14 +90,16 @@ export default function Us() {
 
                 <div className="w-full md:w-1/2">
                     <p className="text-xl font-bold mb-4 border-b-2 border-gray-300 inline-block pb-1">
-                       Մեր պատմությունը
+                        Մեր պատմությունը
                     </p>
                     <p className="text-gray-700 leading-relaxed">Amaranoc.am - ը հիմնադրվել է 2023 թվականի հուլիսի 1-ին և հենց այդ օրվանից սկսած մինչ օրս մենք չենք դադարում զարմացնել մեր հաճախորդներին և գոհացնել մեր գործընկերներին; Մենք հպարտ ենք, որ այս նախագիծը մեր ողջ թիմի համատեղ ջանքերի արդյունքն է և հանդիսանում է Hasce.am անշարժ գույքի ընկերության ամենակարևոր մաս: Յուրաքանչյուր քայլ ամրապնդել է մեր հիմնադիր սկզբունքները և առաջ է մղել մեզ ձեռք բերել անուն, որին վստահում են բոլորը. Եվ եթե դուք այստեղ եք, հավատացած եղեք, որ ամեն ինչ դեռ առջևում է.</p>
                 </div>
             </div>
             <img src="/aboutimg/image8.png" alt="Մեր մասին" className="w-full h-auto rounded-lg object-cover" />
             <img src="/aboutimg/image9.png" alt="Մեր մասին" className="w-full h-auto rounded-lg object-cover" />
-            <Footer />
+            <div>
+                <img src="/footer.png" alt="Footer" />
+            </div>
         </div>
     )
 }

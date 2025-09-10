@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useMarzStore } from "../Store/marzStore";
+import { useMarzStore } from "../Store/storeMarz";
 
 interface MarzData {
   name: string;

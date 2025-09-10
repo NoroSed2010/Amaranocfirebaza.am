@@ -28,13 +28,13 @@ export default function Orinak() {
 
   const scrollLeft = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -200, behavior: "smooth" });
+      scrollRef.current.scrollBy({ left: -400, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
+      scrollRef.current.scrollBy({ left: 400, behavior: "smooth" });
     }
   };
 
@@ -48,10 +48,10 @@ export default function Orinak() {
           <div
             key={index}
             className={orel.divclass}
-            onClick={() => setSelectedOrinak(orel.text)} // օրինակ՝ "Առանձնատներ"
+            onClick={() => setSelectedOrinak(orel.text)}
             style={{ cursor: "pointer" }}
           >
-            <i className={orel.iconclass}></i>
+            <img src={orel.iconclass} alt={orel.text} />
             <h5>{orel.text}</h5>
           </div>
         ))}

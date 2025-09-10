@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Pox from "./Pox";
 import NkarZexj from "./Zexjnkar";
+import Skeleton from "./Skeleton";
 
 interface MainData {
     src: string;
@@ -64,7 +65,9 @@ export default function Maininfo() {
             <Header />
 
             {loading ? (
-                <p>Loading...</p>
+                (data?.length ? data : new Array(3).fill(null)).map((_, i) => (
+                    <Skeleton key={i} margin="5px" width="300px" height="300px" />
+                ))
             ) : item ? (
                 <div>
                     <div className="maininfodiv flex items-center justify-between rounded-2xl border p-3 shadow-sm">
@@ -200,9 +203,11 @@ export default function Maininfo() {
                 </div>
 
             ) : (
-                <p>Տվյալը չի գտնվել</p>
+                <p className="tvyalerror">Տվյալը չի գտնվել</p>
             )}
-            <Footer />
+            <div>
+                <img src="/footer.png" alt="Footer" />
+            </div>
         </div>
     );
 }

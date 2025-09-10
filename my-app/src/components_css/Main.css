@@ -193,7 +193,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 850px;
+  width: 1000px;
   margin: auto;
 }
 
@@ -201,13 +201,14 @@
   display: flex;
   align-items: center;
   gap: 40px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #f1eded;
+  border-bottom: 1px solid #f1eded;
   padding: 15px 10px;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
   scroll-behavior: smooth;
+  height: 80px;
 }
 
 .orinak::-webkit-scrollbar {
@@ -364,17 +365,17 @@
   padding: 20px;
 }
 
-.newDivs > div {
+.newDivs>div {
   background: #fff;
   border-radius: 15px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.newDivs > div:hover {
+.newDivs>div:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .newDivs img {
@@ -391,7 +392,7 @@
   margin: 15px;
 }
 
-.newDivs div > div {
+.newDivs div>div {
   padding: 0 15px 20px 15px;
 }
 
@@ -425,17 +426,17 @@
   color: #fff;
 }
 
-.maininfodiv{
+.maininfodiv {
   margin-top: 100px;
   margin-left: 100px;
   width: 90vw;
 }
 
-.imgmain{
+.imgmain {
   height: 600px;
 }
 
-.aravelutyun{
+.aravelutyun {
   margin-top: 50px;
   margin-left: 150px;
   padding: 10px;
@@ -444,6 +445,31 @@
   border-radius: 20px;
 }
 
-.qartez{
+.qartez {
   height: 65vh;
+}
+
+.mainnkardiv {
+  width: 20vw;
+}
+
+.tvyalerror {
+  color: gray;
+  margin: 15px;
+  margin-top: 100px;
+  margin-left: 650px;
+  font-size: 25px;
+  font-family: cursive;
+}
+
+.pgic {
+  color: #f1eded;
+}
+
+.senaykqanakdiv {
+  margin-top: 10px;
+}
+
+.loxdiv {
+  margin-top: 10px;
 }

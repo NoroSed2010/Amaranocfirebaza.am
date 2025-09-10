@@ -14,8 +14,10 @@ export default function Work() {
       <div className="infonewdiv">
         {selectedComponent}
       </div>
-      
-      <Footer />
+
+      <div>
+        <img src="/footer.png" alt="Footer" />
+      </div>
     </div>
   );
 }

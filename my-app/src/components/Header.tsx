@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <header className={hide ? "header hide" : "header"}>
       <Mainheder />
-      <IconInput search={search} setSearch={setSearch} />
+      <IconInput />
     </header>
   );
 }

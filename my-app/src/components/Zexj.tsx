@@ -27,7 +27,9 @@ export default function Zexj() {
                 <FilterPox />
             </div>
             <NkarZexj />
-            <Footer />
+            <div>
+                <img src="/footer.png" alt="Footer" />
+            </div>
         </>
     )
 }
