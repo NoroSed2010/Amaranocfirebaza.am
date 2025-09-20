@@ -15,6 +15,7 @@ import Work from "./components/Work";
 import Us from "./components/Aboutus";
 import Maininfo from "./components/Maininfo";
 import NkarZexj from "./components/Zexjnkar";
+import Map1 from "./components/Qartez2";
 
 export default function App() {
   const [user, setUser] = useState<User | null>(null);
@@ -40,13 +41,15 @@ export default function App() {
       <Route path="/" element={user ? <Home /> : <Navigate to="/login" />} />
       <Route path="/chatmain" element={user ? <MainChat /> : <Navigate to="/login" />} />
       <Route path="/likes" element={<Zambyux />} />
-      <Route path="/qartez" element={user ? <Map /> : <Navigate to="/login" />} />    
-      <Route path="/Home" element={user ? <Home /> : <Navigate to="/login" />} />    
-      <Route path="/zexj" element={user ? <Zexj /> : <Navigate to="/login" />} />  
-      <Route path="/work" element={user ? <Work /> : <Navigate to="/login" />} />  
-      <Route path="/about-us" element={user ? <Us /> : <Navigate to="/login" />} />    
+      <Route path="/qartez" element={user ? <Map /> : <Navigate to="/login" />} />
+      <Route path="/Home" element={user ? <Home /> : <Navigate to="/login" />} />
+      <Route path="/zexj" element={user ? <Zexj /> : <Navigate to="/login" />} />
+      <Route path="/work" element={user ? <Work /> : <Navigate to="/login" />} />
+      <Route path="/about-us" element={user ? <Us /> : <Navigate to="/login" />} />
       <Route path="/maininfo/:id" element={<Maininfo />} />
       <Route path="/maininfo/:id" element={<NkarZexj />} />
+      <Route path="/qartez" element={user ? <Map /> : <Navigate to="/login" />} />
+      <Route path="/qartez2" element={user ? <Map1 /> : <Navigate to="/login" />} />
     </Routes>
   );
 }

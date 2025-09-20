@@ -2,7 +2,7 @@ import React, { useState, FormEvent, ChangeEvent } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import "../components_css/register.css";
+import "../components_css/mainlogin.css"; // mainlogin.css-ն օգտագործենք
 
 export default function Register() {
   const [email, setEmail] = useState<string>("");
@@ -33,13 +33,13 @@ export default function Register() {
   const handleConfirmPasswordChange = (e: ChangeEvent<HTMLInputElement>) => setConfirmPassword(e.target.value);
 
   return (
-    <div className="register-container">
-      <div className="register-card">
+    <div className="login-container">
+      <div className="login-card">
         <h2>Գրանցվել</h2>
 
         {error && <div className="error-message">{error}</div>}
 
-        <form onSubmit={handleSubmit} className="register-form">
+        <form onSubmit={handleSubmit} className="login-form">
           <div className="form-group">
             <label htmlFor="email">Էլ. հասցե</label>
             <input

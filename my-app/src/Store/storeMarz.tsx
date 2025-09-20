@@ -1,6 +1,7 @@
 import { create } from "zustand";
 
 interface MarzStore {
+  // Ֆիլտրերի state-երը
   selected: string[];
   count: number;
   setCount: (c: number) => void;
@@ -16,15 +17,18 @@ interface MarzStore {
   selectedOrinak: string | null;
   setSelectedOrinak: (v: string | null) => void;
 
+  // Buttons: Բոլորը | Թոփի | Զեղչված
   active: string;
   setActive: (v: string) => void;
 
+  // Լրացուցիչ ֆիլտրեր
   nightActive: string;
   setNightActive: (v: string) => void;
 
   senyakActive: string;
   setSenyakActive: (v: string) => void;
 
+  // Helpers
   toggle: (v: string) => void;
   clear: () => void;
 }
@@ -45,6 +49,7 @@ export const useMarzStore = create<MarzStore>((set) => ({
   selectedOrinak: null,
   setSelectedOrinak: (v) => set({ selectedOrinak: v }),
 
+  // Default → Բոլորը
   active: "Բոլորը",
   setActive: (v) => set({ active: v }),
 
